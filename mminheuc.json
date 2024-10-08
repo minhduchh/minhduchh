@@ -1,0 +1,20 @@
+{
+    "functions": {
+        "aimbot": {
+            "name": "🎯 Bật Aimbot (Root)",
+            "icon": "https://example.com/icons/aimbot.gif",
+            "action": "toggleAimbot"
+        },
+        "aimlock": {
+            "name": "🔒 Bật Aim Lock (Root)",
+            "icon": "https://example.com/icons/aimlock.gif",
+            "action": "toggleAimLock"
+        },
+        "norecoil": {
+            "name": "💥 Bật No Recoil (Root)",
+            "icon": "https://example.com/icons/norecoil.gif",
+            "action": "toggleNoRecoil"
+        }
+    },
+    "copyright": "© 2024 Tên của bạn. Bảo lưu mọi quyền."
+}
