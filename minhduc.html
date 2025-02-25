@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Filza Style File Manager</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container styling */
+        .file-manager {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Header styling */
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* File list styling */
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+
+        .file-item:hover {
+            background: #f0f0f0;
+        }
+
+        /* Icon styling */
+        .file-item img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        /* Folder and file name styling */
+        .file-name {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Add button styling */
+        .add-button {
+            font-size: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .add-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Hidden file input */
+        .file-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="file-manager">
+    <div class="header">
+        <span>My Files</span>
+        <button class="add-button" onclick="document.getElementById('fileInput').click()">+</button>
+        <input type="file" id="fileInput" class="file-input" multiple onchange="addFiles(event)">
+    </div>
+    <ul class="file-list" id="fileList">
+        <li class="file-item">
+            <img src="folder-icon.png" alt="Folder Icon" class="folder-icon">
+            <span class="file-name">Documents</span>
+        </li>
+        <li class="file-item">
+            <img src="folder-icon.png" alt="Folder Icon" class="folder-icon">
+            <span class="file-name">Downloads</span>
+        </li>
+
+    </ul>
+</div>
+
+<script>
+    // Function to handle file addition
+    function addFiles(event) {
+        const fileList = document.getElementById('fileList');
+        const files = event.target.files;
+
+        for (let file of files) {
+            // Remove file extension from the file name
+            const fileNameWithoutExtension = file.name.replace(/\.[^/.]+$/, "");
+
+            // Create a new list item for each file
+            const fileItem = document.createElement('li');
+            fileItem.className = 'file-item';
+
+            // Add file icon
+            const fileIcon = document.createElement('img');
+            fileIcon.src = 'file-icon.png';
+            fileIcon.alt = 'File Icon';
+            fileIcon.className = 'file-icon';
+            fileItem.appendChild(fileIcon);
+
+            // Add file name without extension
+            const fileName = document.createElement('span');
+            fileName.className = 'file-name';
+            fileName.textContent = fileNameWithoutExtension;
+            fileItem.appendChild(fileName);
+
+            // Append the new file item to the file list
+            fileList.appendChild(fileItem);
+        }
+    }
+</script>
+
+</body>
+</html>
