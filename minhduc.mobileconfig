@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.minhduc.ultratouchmax</string>
+    <key>PayloadUUID</key>
+    <string>e8b9c7f2-6d4a-4d6f-b812-5a9e9c9d2fff</string>
+    <key>PayloadDisplayName</key>
+    <string>🚀 ULTRA TOUCH PRO MAX V2 🚀</string>
+    <key>PayloadOrganization</key>
+    <string>Minh Đức Dev</string>
+    <key>PayloadDescription</key>
+    <string>🔥 Siêu tối ưu cảm ứng, tốc độ và hiển thị</string>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadContent</key>
+    <array>
+        <!-- 🚀 CẢM ỨNG & HIỆU SUẤT -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.accessibility.touch</string>
+            <key>PayloadIdentifier</key>
+            <string>com.minhduc.config.touch</string>
+            <key>PayloadUUID</key>
+            <string>12345678-9abc-def0-1234-56789abcdef0</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDisplayName</key>
+            <string>⚡ Ultra Touch Max</string>
+
+            <key>TouchAccommodationsEnabled</key>
+            <true/>
+            <key>HoldDuration</key>
+            <real>0.001</real>
+            <key>IgnoreRepeat</key>
+            <true/>
+            <key>TapAssistance</key>
+            <string>FinalTap</string>
+            <key>SwipeGesturesEnabled</key>
+            <true/>
+            <key>UseInitialTouchLocation</key>
+            <true/>
+        </dict>
+
+        <!-- 📱 TỐI ƯU MÀN HÌNH & HIỂN THỊ -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.accessibility.display</string>
+            <key>PayloadIdentifier</key>
+            <string>com.minhduc.config.display</string>
+            <key>PayloadUUID</key>
+            <string>9f8e7d6c-5b4a-3c2d-1e0f-abcdef123456</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDisplayName</key>
+            <string>📱 Ultra Display Pro MAX</string>
+
+            <key>AutoBrightnessEnabled</key>
+            <false/>
+            <key>ReduceWhitePoint</key>
+            <true/>
+            <key>IncreaseContrast</key>
+            <true/>
+        </dict>
+
+        <!-- 🎮 TỐI ƯU GAME & FPS -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.settings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>com.minhduc.config.gaming</string>
+            <key>PayloadUUID</key>
+            <string>abcdef12-3456-789a-bcde-f0123456789a</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadDisplayName</key>
+            <string>🎮 Ultra Gaming Mode</string>
+
+            <key>DisableBackgroundAppRefresh</key>
+            <true/>
+        </dict>
+    </array>
+</dict>
+</plist>
